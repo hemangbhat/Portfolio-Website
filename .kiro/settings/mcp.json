@@ -1,0 +1,19 @@
+{
+  "mcpServers": {
+    "playwright": {
+      "command": "npx",
+      "args": [
+        "@playwright/mcp@latest"
+      ],
+      "autoApprove": [
+        "browser_navigate",
+        "browser_wait_for"
+      ]
+    },
+    "context7": {
+      "url": "https://mcp.context7.com/mcp",
+      "disabled": true,
+      "autoApprove": []
+    }
+  }
+}
