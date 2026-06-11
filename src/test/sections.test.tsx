@@ -3,7 +3,7 @@ import { render, screen, within } from '@testing-library/react';
 import Projects from '../sections/Projects';
 import Skills from '../sections/Skills';
 import Experience from '../sections/Experience';
-import Certifications from '../sections/Certifications';
+import Education from '../sections/Education';
 import { content } from '../content/content';
 
 describe('Projects section', () => {
@@ -55,10 +55,14 @@ describe('Experience section', () => {
   });
 });
 
-describe('Certifications section', () => {
-  it('renders one card per certification', () => {
-    render(<Certifications />);
-    const headings = screen.getAllByRole('heading', { level: 3 });
-    expect(headings.length).toBe(content.certifications.length);
+describe('Education section', () => {
+  it('renders every education entry and all merged certifications', () => {
+    render(<Education />);
+    for (const e of content.credentials.education) {
+      expect(screen.getByText(e.title)).toBeInTheDocument();
+    }
+    // certifications are merged into Education
+    const certTitles = screen.getAllByText(content.certifications[0].title);
+    expect(certTitles.length).toBe(content.certifications.length);
   });
 });

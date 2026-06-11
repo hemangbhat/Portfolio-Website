@@ -12,16 +12,13 @@ import PageReveal from '@/components/PageReveal';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import Hero from '@/sections/Hero';
-import Quote from '@/sections/Quote';
 import Highlights from '@/sections/Highlights';
 import About from '@/sections/About';
 import Experience from '@/sections/Experience';
 import Projects from '@/sections/Projects';
 import Skills from '@/sections/Skills';
 import ProblemSolving from '@/sections/ProblemSolving';
-import Writing from '@/sections/Writing';
 import Education from '@/sections/Education';
-import Certifications from '@/sections/Certifications';
 import Contact from '@/sections/Contact';
 
 function Page() {
@@ -36,16 +33,13 @@ function Page() {
       <SectionRail activeId={activeId} />
       <main>
         <Hero />
-        <Quote />
         <Highlights />
         <About />
         <Experience />
         <Projects />
         <Skills />
         <ProblemSolving />
-        <Writing />
         <Education />
-        <Certifications />
         <Contact />
       </main>
       <Footer />

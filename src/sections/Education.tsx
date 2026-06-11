@@ -1,19 +1,22 @@
+import { BadgeCheck } from 'lucide-react';
 import Reveal from '../components/motion/Reveal';
 import Section, { SectionHeading } from '../components/ui/Section';
 import Card from '../components/ui/Card';
+import Chip from '../components/ui/Chip';
 import { content } from '../content/content';
 
 export default function Education() {
   const { education, positions, awards } = content.credentials;
+  const { certifications } = content;
 
   return (
-    <Section id="education" ariaLabel="Education, positions and awards">
+    <Section id="education" ariaLabel="Education, awards and certifications">
       <SectionHeading
-        eyebrow="Education & Recognition"
+        eyebrow="Education & Credentials"
         title="Background & honors"
-        index="07"
-        meta={`${education.length} schools · ${awards.length} awards`}
-        description="Academics, leadership, and a few results I'm proud of."
+        index="06"
+        meta={`${education.length} schools · ${awards.length} awards · ${certifications.length} certs`}
+        description="Academics, leadership, recognition, and certifications."
       />
 
       <div className="mt-12 grid grid-cols-1 gap-5 lg:grid-cols-3">
@@ -74,6 +77,36 @@ export default function Education() {
           </Card>
         </Reveal>
       </div>
+
+      {/* Certifications — merged in */}
+      <Reveal delay={0.05}>
+        <div className="mt-5">
+          <h3 className="mb-4 text-xs font-semibold uppercase tracking-[0.18em] text-accent">
+            Certifications
+          </h3>
+          <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            {certifications.map((c, i) => (
+              <Card key={`${c.title}-${i}`} className="flex flex-col">
+                <div className="flex items-center gap-3">
+                  <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl border border-border bg-surface-2/70">
+                    <BadgeCheck className="h-5 w-5 text-accent" aria-hidden="true" />
+                  </span>
+                  <div>
+                    <p className="font-medium leading-tight text-fg">{c.title}</p>
+                    <p className="text-xs text-accent">{c.issuer}</p>
+                  </div>
+                </div>
+                <p className="mt-3 text-xs uppercase tracking-[0.14em] text-muted">{c.date}</p>
+                <div className="mt-3 flex flex-wrap gap-1.5">
+                  {c.skills.map((s) => (
+                    <Chip key={s} label={s} />
+                  ))}
+                </div>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </Reveal>
     </Section>
   );
 }
