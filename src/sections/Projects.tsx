@@ -10,12 +10,15 @@ import Card from '../components/ui/Card';
 import Chip from '../components/ui/Chip';
 import CTA from '../components/ui/CTA';
 import Tilt from '../components/ui/Tilt';
+import { iconFor } from '../components/ui/icons';
 import { content, type Project } from '../content/content';
 import { cn } from '../lib/cn';
 
 function ProjectCard({ project }: { project: Project }) {
   const { title, tagline, summary, problem, result, tech, links, featured } = project;
-  const primary = links[0];
+  const live = links.find((l) => l.kind === 'live');
+  const repo = links.find((l) => l.kind === 'repo');
+  const primary = live ?? repo ?? links[0];
   return (
     <Card featured={featured} className="flex h-full flex-col">
       {featured && (
@@ -64,16 +67,24 @@ function ProjectCard({ project }: { project: Project }) {
         {tech.map((t) => <Chip key={t} label={t} withLogo />)}
       </div>
       <div className="mt-6 flex flex-wrap items-center gap-3 border-t border-border pt-5">
-        {links.map((l, i) => (
+        {live && (
           <CTA
-            key={l.label}
-            label={i === 0 ? 'Open repo' : l.label}
-            href={l.href}
-            external={l.external}
-            variant={i === 0 ? 'secondary' : 'ghost'}
-            icon={<ExternalLink className="h-3.5 w-3.5" aria-hidden="true" />}
+            label="Live demo"
+            href={live.href}
+            external={live.external}
+            variant="primary"
+            icon={iconFor('live')}
           />
-        ))}
+        )}
+        {repo && (
+          <CTA
+            label="Source code"
+            href={repo.href}
+            external={repo.external}
+            variant="secondary"
+            icon={iconFor('repo')}
+          />
+        )}
       </div>
     </Card>
   );

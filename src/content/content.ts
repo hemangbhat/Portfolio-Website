@@ -2,7 +2,7 @@ export interface CTAItem {
   label: string;
   href: string;
   external?: boolean;
-  kind?: 'resume' | 'github' | 'linkedin' | 'email' | 'leetcode' | 'link';
+  kind?: 'resume' | 'github' | 'linkedin' | 'email' | 'leetcode' | 'link' | 'repo' | 'live';
 }
 
 export interface Metric {
@@ -299,7 +299,10 @@ export const content: SiteContent = {
       result:
         'Built across 12 phases: pgvector cosine retrieval with HNSW tuning, JWT auth + RBAC + document-level access control, PII redaction before any external delegation, async ingestion, query caching, and full Sentry distributed tracing. Backed by 306+ tests including 34+ Hypothesis property-based tests, and runs fully offline via an in-memory path.',
       tech: ['Next.js 16', 'React 19', 'TypeScript', 'Python 3.11', 'PostgreSQL', 'pgvector', 'Drizzle ORM', 'Sentry', 'Hypothesis', 'MCP'],
-      links: [{ label: 'View project', href: '#', external: true, kind: 'link' }],
+      links: [
+        { label: 'Live demo', href: '#', external: true, kind: 'live' },
+        { label: 'Source code', href: '#', external: true, kind: 'repo' },
+      ],
       featured: true,
     },
     {
@@ -312,7 +315,10 @@ export const content: SiteContent = {
       result:
         'Shipped a customizable offer-comparison matrix, CSV/PDF export, and Stripe-gated premium features — all behind secure auth and protected dashboards.',
       tech: ['Next.js', 'React', 'TypeScript', 'Tailwind CSS', 'MongoDB', 'Clerk', 'Stripe', 'Chart.js', 'jsPDF', 'Puppeteer'],
-      links: [{ label: 'View project', href: '#', external: true, kind: 'link' }],
+      links: [
+        { label: 'Live demo', href: '#', external: true, kind: 'live' },
+        { label: 'Source code', href: '#', external: true, kind: 'repo' },
+      ],
       featured: false,
     },
     {
@@ -325,7 +331,10 @@ export const content: SiteContent = {
       result:
         'Reached up to 94.25% test accuracy and 0.920 macro F1, with SHAP-based explainability and CI/CD test coverage.',
       tech: ['Python', 'NLP', 'FinBERT', 'LSTM', 'SHAP', 'GridSearchCV', 'Pytest', 'GitHub Actions'],
-      links: [{ label: 'View project', href: '#', external: true, kind: 'link' }],
+      links: [
+        { label: 'Live demo', href: '#', external: true, kind: 'live' },
+        { label: 'Source code', href: '#', external: true, kind: 'repo' },
+      ],
       featured: false,
     },
     {
@@ -337,7 +346,10 @@ export const content: SiteContent = {
       result:
         'Built a direct-to-cloud upload flow, Google Sheets sync, email automation, and secure database workflows that scaled with demand.',
       tech: ['AWS S3', 'Google Sheets API v4', 'Brevo API', 'Neon Postgres', 'Drizzle ORM'],
-      links: [{ label: 'View project', href: '#', external: true, kind: 'link' }],
+      links: [
+        { label: 'Live demo', href: '#', external: true, kind: 'live' },
+        { label: 'Source code', href: '#', external: true, kind: 'repo' },
+      ],
       featured: false,
     },
   ],

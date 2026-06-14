@@ -92,6 +92,9 @@ export function iconFor(kind?: string) {
       return <MailIcon />;
     case 'leetcode':
       return <CodeIcon />;
+    case 'repo':
+      return <GitHubIcon />;
+    case 'live':
     case 'link':
       return <ArrowIcon />;
     default:
