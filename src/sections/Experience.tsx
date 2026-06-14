@@ -33,7 +33,15 @@ export default function Experience() {
                     </p>
                   </div>
                 </div>
-                <span className="shrink-0 font-mono text-xs tabular-nums text-muted">{entry.duration}</span>
+                <span className="flex shrink-0 items-center gap-2 font-mono text-xs tabular-nums text-muted">
+                  {/Present/i.test(entry.duration) && (
+                    <span className="inline-flex items-center gap-1.5 rounded-full border border-emerald-400/30 bg-emerald-400/10 px-2 py-0.5 font-sans text-[10px] font-medium uppercase tracking-wide text-emerald-400">
+                      <span className="h-1.5 w-1.5 rounded-full bg-emerald-400" aria-hidden="true" />
+                      Now
+                    </span>
+                  )}
+                  {entry.duration}
+                </span>
               </div>
 
               <ul className="mt-5 space-y-2.5 sm:pl-8">

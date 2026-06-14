@@ -36,11 +36,38 @@ export const viewport: Viewport = {
 
 const themeScript = `(function(){try{var t=localStorage.getItem('theme');if(t!=='light'&&t!=='dark')t='dark';document.documentElement.classList.toggle('dark',t==='dark');}catch(e){document.documentElement.classList.add('dark');}})();`;
 
+const personSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Person',
+  name: 'Hemang Bhat',
+  jobTitle: 'Full-Stack Developer & AI/ML Builder',
+  email: 'mailto:bhat.hemang@gmail.com',
+  address: { '@type': 'PostalAddress', addressLocality: 'New Delhi', addressCountry: 'India' },
+  alumniOf: {
+    '@type': 'CollegeOrUniversity',
+    name: 'Netaji Subhas University of Technology',
+  },
+  knowsAbout: [
+    'Full-Stack Development',
+    'Artificial Intelligence',
+    'Machine Learning',
+    'Agentic AI',
+    'Data Structures and Algorithms',
+    'TypeScript',
+    'Next.js',
+    'Python',
+  ],
+};
+
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" className={`${inter.variable} ${fraunces.variable} dark`} suppressHydrationWarning>
       <head>
         <script dangerouslySetInnerHTML={{ __html: themeScript }} />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema) }}
+        />
       </head>
       <body className="font-sans">
         {children}

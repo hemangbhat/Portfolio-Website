@@ -99,6 +99,7 @@ export interface HeroContent {
   positioning: string;
   bio: string;
   availability: string;
+  trust: string[];
   ctas: CTAItem[];
 }
 
@@ -129,8 +130,9 @@ export const content: SiteContent = {
     title: 'Full-Stack Developer · AI/ML Builder · DSA Enthusiast',
     roles: ['Full-Stack Developer', 'AI/ML Builder', 'DSA Enthusiast'],
     positioning: 'I turn ideas into working products — clean interfaces, scalable systems, and AI that actually ships.',
-    bio: 'I build full-stack products, AI-driven workflows, and data-driven tools with a strong focus on clean UI, scalable architecture, and practical problem solving. I enjoy taking an idea from a blank file to a product people use — across web development, automation, and machine learning.',
+    bio: 'I build full-stack products and AI-driven workflows end to end — from a blank file to something people actually use. Lately: agentic systems, clean UIs, and shipping fast.',
     availability: 'Based in New Delhi, India — open to internships & collaborations',
+    trust: ['CSAI @ NSUT', 'ex-Copper Digital', '250+ DSA solved'],
     ctas: [
       { label: 'Resume', href: '#', kind: 'resume', external: true },
       { label: 'GitHub', href: '#', kind: 'github', external: true },

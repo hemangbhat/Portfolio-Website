@@ -2,20 +2,25 @@
 
 import { motion, useReducedMotion } from 'framer-motion';
 import dynamic from 'next/dynamic';
+import { ArrowDown } from 'lucide-react';
 import { content } from '../content/content';
 import CTA from '../components/ui/CTA';
 import Typewriter from '../components/ui/Typewriter';
 import Aurora from '../components/ui/Aurora';
 import SplitName from '../components/SplitName';
 import Magnetic from '../components/ui/Magnetic';
+import { scrollToSection } from '../components/SmoothScroll';
 import { iconFor } from '../components/ui/icons';
 
 // R3F canvas — lazy-loaded so it doesn't block the hero paint
 const HeroCanvas = dynamic(() => import('../components/HeroCanvas'), { ssr: false });
 
 export default function Hero() {
-  const { name, roles, positioning, bio, availability, ctas } = content.hero;
+  const { name, roles, positioning, bio, availability, trust, ctas } = content.hero;
   const reduce = useReducedMotion();
+
+  const resume = ctas.find((c) => c.kind === 'resume');
+  const socials = ctas.filter((c) => c.kind && ['github', 'linkedin', 'email'].includes(c.kind));
 
   const item = {
     hidden: { opacity: 0, y: reduce ? 0 : 18 },
@@ -90,18 +95,59 @@ export default function Hero() {
             {bio}
           </motion.p>
 
-          <motion.div variants={item} className="mt-9 flex flex-wrap gap-3">
-            {ctas.map((c, i) => (
-              <Magnetic key={c.label}>
+          {/* Trust strip — quick credibility signal */}
+          <motion.ul
+            variants={item}
+            className="mt-6 flex flex-wrap items-center gap-x-3 gap-y-2 text-sm text-muted"
+          >
+            {trust.map((t, i) => (
+              <li key={t} className="flex items-center gap-3">
+                {i > 0 && <span className="h-1 w-1 rounded-full bg-accent/60" aria-hidden="true" />}
+                <span className="font-medium text-fg/80">{t}</span>
+              </li>
+            ))}
+          </motion.ul>
+
+          <motion.div variants={item} className="mt-9 flex flex-wrap items-center gap-3">
+            {/* Primary action */}
+            <Magnetic>
+              <CTA
+                label="View work"
+                href="#projects"
+                variant="primary"
+                icon={<ArrowDown className="h-4 w-4" aria-hidden="true" />}
+                onClick={() => scrollToSection('projects')}
+                className="cursor-pointer"
+              />
+            </Magnetic>
+
+            {/* Strong secondary */}
+            {resume && (
+              <Magnetic>
                 <CTA
-                  label={c.label}
-                  href={c.href}
-                  external={c.external}
-                  variant={i === 0 ? 'primary' : 'secondary'}
-                  icon={iconFor(c.kind)}
+                  label="Resume"
+                  href={resume.href}
+                  external={resume.external}
+                  variant="secondary"
+                  icon={iconFor('resume')}
                 />
               </Magnetic>
-            ))}
+            )}
+
+            {/* Socials demoted to compact icon buttons */}
+            <div className="flex items-center gap-2">
+              {socials.map((s) => (
+                <Magnetic key={s.label}>
+                  <CTA
+                    label={s.label}
+                    href={s.href}
+                    external={s.external}
+                    variant="icon"
+                    icon={iconFor(s.kind)}
+                  />
+                </Magnetic>
+              ))}
+            </div>
           </motion.div>
         </motion.div>
       </div>

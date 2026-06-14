@@ -10,7 +10,8 @@ describe('Projects section', () => {
   it('renders one card per project (Property 10)', () => {
     render(<Projects />);
     for (const p of content.projects) {
-      expect(screen.getByRole('heading', { name: p.title })).toBeInTheDocument();
+      // titles render as links to the project's primary repo
+      expect(screen.getByRole('link', { name: p.title })).toBeInTheDocument();
     }
   });
 

@@ -40,6 +40,9 @@ export default function Contact() {
           <h2 className="mt-3 text-balance font-serif text-4xl font-medium leading-tight tracking-tight text-fg sm:text-5xl">
             Let&apos;s build something <span className="italic text-accent">intelligent.</span>
           </h2>
+          <p className="mt-4 text-sm text-muted">
+            Open to internships and collaborations — I usually reply within a day.
+          </p>
         </Reveal>
 
         <div className="mt-12 grid grid-cols-1 gap-6 lg:grid-cols-2">

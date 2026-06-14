@@ -27,11 +27,17 @@ function Page() {
 
   return (
     <div className="min-h-screen bg-bg text-fg">
+      <a
+        href="#main"
+        className="sr-only z-[200] rounded-full border border-border bg-surface px-4 py-2 text-sm font-medium text-fg focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:outline-none focus-visible:ring-2 focus-visible:ring-accent"
+      >
+        Skip to content
+      </a>
       <PageReveal />
       <ScrollProgress />
       <Navbar activeId={activeId} />
       <SectionRail activeId={activeId} />
-      <main>
+      <main id="main">
         <Hero />
         <Highlights />
         <About />

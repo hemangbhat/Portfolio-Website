@@ -87,7 +87,7 @@ export default function ProblemSolving() {
                 <span className="font-semibold text-fg">{d.submissions}+</span>{' '}
                 <span className="text-muted">submissions in the past year</span>
               </p>
-              <a href="#" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1.5 text-sm text-accent hover:underline">
+              <a href="#" target="_blank" rel="noopener noreferrer" aria-label="View full DSA profile" className="inline-flex items-center gap-1.5 text-sm text-accent hover:underline">
                 View profile <ExternalLink className="h-3.5 w-3.5" aria-hidden="true" />
               </a>
             </div>

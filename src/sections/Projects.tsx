@@ -15,6 +15,7 @@ import { cn } from '../lib/cn';
 
 function ProjectCard({ project }: { project: Project }) {
   const { title, tagline, summary, problem, result, tech, links, featured } = project;
+  const primary = links[0];
   return (
     <Card featured={featured} className="flex h-full flex-col">
       {featured && (
@@ -24,9 +25,27 @@ function ProjectCard({ project }: { project: Project }) {
       )}
       <div className={cn('flex flex-col gap-6', featured && 'lg:flex-row lg:gap-10')}>
         <div className={cn(featured && 'lg:w-1/2')}>
-          <h3 className={cn('font-semibold tracking-tight text-fg', featured ? 'text-2xl sm:text-3xl' : 'text-xl')}>
-            {title}
-          </h3>
+          {primary ? (
+            <a
+              href={primary.href}
+              target={primary.external ? '_blank' : undefined}
+              rel={primary.external ? 'noopener noreferrer' : undefined}
+              className={cn(
+                'group/title inline-flex items-center gap-2 font-semibold tracking-tight text-fg transition-colors hover:text-accent',
+                featured ? 'text-2xl sm:text-3xl' : 'text-xl'
+              )}
+            >
+              {title}
+              <ExternalLink
+                className="h-4 w-4 opacity-0 transition-all duration-200 group-hover/title:translate-x-0.5 group-hover/title:opacity-100"
+                aria-hidden="true"
+              />
+            </a>
+          ) : (
+            <h3 className={cn('font-semibold tracking-tight text-fg', featured ? 'text-2xl sm:text-3xl' : 'text-xl')}>
+              {title}
+            </h3>
+          )}
           <p className="mt-1 text-sm font-medium text-accent">{tagline}</p>
           <p className="mt-4 text-sm leading-relaxed text-muted">{summary}</p>
         </div>
@@ -44,10 +63,16 @@ function ProjectCard({ project }: { project: Project }) {
       <div className="mt-6 flex flex-wrap gap-2">
         {tech.map((t) => <Chip key={t} label={t} withLogo />)}
       </div>
-      <div className="mt-5 flex flex-wrap items-center gap-3">
-        {links.map((l) => (
-          <CTA key={l.label} label={l.label} href={l.href} external={l.external} variant="ghost"
-            icon={<ExternalLink className="h-3.5 w-3.5" aria-hidden="true" />} />
+      <div className="mt-6 flex flex-wrap items-center gap-3 border-t border-border pt-5">
+        {links.map((l, i) => (
+          <CTA
+            key={l.label}
+            label={i === 0 ? 'Open repo' : l.label}
+            href={l.href}
+            external={l.external}
+            variant={i === 0 ? 'secondary' : 'ghost'}
+            icon={<ExternalLink className="h-3.5 w-3.5" aria-hidden="true" />}
+          />
         ))}
       </div>
     </Card>
@@ -121,7 +146,7 @@ export default function Projects() {
               onClick={scrollPrev}
               disabled={!canPrev}
               aria-label="Previous project"
-              className="inline-flex h-9 w-9 items-center justify-center rounded-full border border-border bg-surface/70 text-fg transition-all hover:border-accent/50 hover:text-accent disabled:pointer-events-none disabled:opacity-30"
+              className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-border bg-surface/70 text-fg transition-all hover:border-accent/50 hover:text-accent disabled:pointer-events-none disabled:opacity-30"
             >
               <ChevronLeft className="h-4 w-4" aria-hidden="true" />
             </button>
@@ -130,7 +155,7 @@ export default function Projects() {
               onClick={scrollNext}
               disabled={!canNext}
               aria-label="Next project"
-              className="inline-flex h-9 w-9 items-center justify-center rounded-full border border-border bg-surface/70 text-fg transition-all hover:border-accent/50 hover:text-accent disabled:pointer-events-none disabled:opacity-30"
+              className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-border bg-surface/70 text-fg transition-all hover:border-accent/50 hover:text-accent disabled:pointer-events-none disabled:opacity-30"
             >
               <ChevronRight className="h-4 w-4" aria-hidden="true" />
             </button>
@@ -145,7 +170,7 @@ export default function Projects() {
           aria-label="Projects carousel"
           aria-roledescription="carousel"
         >
-          <div className="flex gap-5" style={{ touchAction: 'pan-y' }}>
+          <div className="flex cursor-grab gap-5 active:cursor-grabbing" style={{ touchAction: 'pan-y' }}>
             {projects.map((p, i) => (
               <motion.div
                 key={p.title}
