@@ -42,6 +42,7 @@
     "fast-check": "^3.19.0",
     "jsdom": "^24.1.0",
     "postcss": "^8.4.39",
+    "sharp": "^0.35.1",
     "tailwindcss": "^3.4.6",
     "typescript": "^5.5.3",
     "vitest": "^2.0.2"
