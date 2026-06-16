@@ -33,7 +33,7 @@ export const metadata: Metadata = {
     siteName: 'Hemang Bhat',
     images: [
       {
-        url: '/og-image.png',
+        url: 'https://hemangbhat.dev/og.png',
         width: 1200,
         height: 630,
         alt: 'Hemang Bhat — Full-Stack Developer & AI/ML Builder',
@@ -44,7 +44,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Hemang Bhat — Full-Stack Developer & AI/ML Builder',
     description: 'I build full-stack products, AI-driven workflows, and data-driven tools.',
-    images: ['/og-image.png'],
+    images: ['https://hemangbhat.dev/og.png'],
   },
   alternates: {
     canonical: 'https://hemangbhat.dev',
