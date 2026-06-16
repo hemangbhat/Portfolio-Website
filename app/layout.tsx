@@ -20,7 +20,11 @@ export const metadata: Metadata = {
   title: 'Hemang Bhat — Full-Stack Developer & AI/ML Builder',
   description:
     'Hemang Bhat — Full-Stack Developer, AI/ML Builder, and DSA Enthusiast based in New Delhi. I turn ideas into working products.',
-  metadataBase: new URL('https://hemangbhat.dev'),
+  metadataBase: new URL(
+    process.env.VERCEL_URL
+      ? `https://${process.env.VERCEL_URL}`
+      : 'https://hemangbhat.dev'
+  ),
   openGraph: {
     title: 'Hemang Bhat — Full-Stack Developer & AI/ML Builder',
     description: 'I build full-stack products, AI-driven workflows, and data-driven tools.',
@@ -29,7 +33,7 @@ export const metadata: Metadata = {
     siteName: 'Hemang Bhat',
     images: [
       {
-        url: 'https://hemangbhat.dev/opengraph-image',
+        url: '/api/og',
         width: 1200,
         height: 630,
         alt: 'Hemang Bhat — Full-Stack Developer & AI/ML Builder',
@@ -40,7 +44,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Hemang Bhat — Full-Stack Developer & AI/ML Builder',
     description: 'I build full-stack products, AI-driven workflows, and data-driven tools.',
-    images: ['https://hemangbhat.dev/opengraph-image'],
+    images: ['/api/og'],
   },
   alternates: {
     canonical: 'https://hemangbhat.dev',
