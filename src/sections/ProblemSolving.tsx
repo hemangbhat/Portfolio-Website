@@ -15,10 +15,10 @@ export default function ProblemSolving() {
   const grid = buildHeatmap(40, 7, 23);
 
   const stats = [
-    { label: 'Max Rating', value: d.rating.toLocaleString() },
-    { label: 'Level', value: d.level },
+    { label: 'Solved', value: `${d.solved}` },
     { label: 'Global Ranking', value: d.ranking },
-    { label: 'Contests', value: String(d.contests) },
+    { label: 'Active Days', value: String(d.activeDays) },
+    { label: 'Max Streak', value: `${d.maxStreak} days` },
   ];
 
   const segments = [
@@ -84,7 +84,7 @@ export default function ProblemSolving() {
           <div className="flex h-full flex-col rounded-3xl border border-border bg-surface/70 p-6 shadow-soft">
             <div className="flex items-center justify-between">
               <p className="text-sm">
-                <span className="font-semibold text-fg">{d.submissions}+</span>{' '}
+                <span className="font-semibold text-fg">{d.submissions}</span>{' '}
                 <span className="text-muted">submissions in the past year</span>
               </p>
               <a href="https://leetcode.com/u/blitzkrieg7" target="_blank" rel="noopener noreferrer" aria-label="View full DSA profile" className="inline-flex items-center gap-1.5 text-sm text-accent hover:underline">

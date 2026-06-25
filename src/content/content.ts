@@ -138,7 +138,7 @@ export const content: SiteContent = {
     availability: 'Based in New Delhi, India — open to internships & collaborations',
     trust: ['CSAI @ NSUT', 'ex-Copper Digital', '250+ DSA solved'],
     ctas: [
-      { label: 'Resume', href: '#', kind: 'resume', external: true },
+      { label: 'Resume', href: 'https://drive.google.com/file/d/11dbiKAn9oh7S7Cfjw3L4_VuwN7s22QU4/view?usp=sharing', kind: 'resume', external: true },
       { label: 'GitHub', href: GITHUB, kind: 'github', external: true },
       { label: 'LinkedIn', href: LINKEDIN, kind: 'linkedin', external: true },
       { label: 'Email', href: `mailto:${EMAIL}`, kind: 'email' },
@@ -278,18 +278,18 @@ export const content: SiteContent = {
   },
 
   dsa: {
-    solved: 250,
-    total: 3400,
-    easy: [120, 880],
-    medium: [110, 1750],
-    hard: [20, 770],
+    solved: 233,
+    total: 3973,
+    easy: [76, 951],
+    medium: [132, 2074],
+    hard: [25, 948],
     rating: 1650,
     level: 'Specialist',
-    ranking: 'Top 15%',
+    ranking: '#661,973',
     contests: 12,
-    activeDays: 180,
-    maxStreak: 40,
-    submissions: 600,
+    activeDays: 99,
+    maxStreak: 35,
+    submissions: 355,
   },
 
   projects: [
