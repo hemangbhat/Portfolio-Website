@@ -14,7 +14,7 @@
 <br/><br/>
 
 <a href="https://hemangbhat.dev"><img src="https://img.shields.io/badge/Portfolio-8B5CF6?style=for-the-badge&logo=vercel&logoColor=white" alt="portfolio" /></a>
-<a href="https://linkedin.com/in/hemangbhat"><img src="https://img.shields.io/badge/LinkedIn-6D28D9?style=for-the-badge&logo=linkedin&logoColor=white" alt="linkedin" /></a>
+<a href="https://www.linkedin.com/in/hemangbhat"><img src="https://img.shields.io/badge/LinkedIn-6D28D9?style=for-the-badge&logo=linkedin&logoColor=white" alt="linkedin" /></a>
 <a href="mailto:bhat.hemang@gmail.com"><img src="https://img.shields.io/badge/Email-7C3AED?style=for-the-badge&logo=gmail&logoColor=white" alt="email" /></a>
 <a href="https://github.com/hemangbhat"><img src="https://img.shields.io/badge/GitHub-4C1D95?style=for-the-badge&logo=github&logoColor=white" alt="github" /></a>
 
@@ -238,7 +238,7 @@ Led technical community operations and large-scale event execution for the stude
 
 <div align="center">
 
-<a href="https://leetcode.com/u/hemangbhat"><img src="https://img.shields.io/badge/LeetCode-250%2B%20Solved-FFA116?style=for-the-badge&logo=leetcode&logoColor=black" alt="leetcode" /></a>
+<a href="https://leetcode.com/u/blitzkrieg7"><img src="https://img.shields.io/badge/LeetCode-250%2B%20Solved-FFA116?style=for-the-badge&logo=leetcode&logoColor=black" alt="leetcode" /></a>
 <a href="https://geeksforgeeks.org/user/hemangbhat"><img src="https://img.shields.io/badge/GeeksforGeeks-Profile-2F8D46?style=for-the-badge&logo=geeksforgeeks&logoColor=white" alt="gfg" /></a>
 <a href="https://hackerrank.com/hemangbhat"><img src="https://img.shields.io/badge/HackerRank-Profile-00EA64?style=for-the-badge&logo=hackerrank&logoColor=black" alt="hackerrank" /></a>
 <a href="https://codechef.com/users/hemangbhat"><img src="https://img.shields.io/badge/CodeChef-Profile-5B4638?style=for-the-badge&logo=codechef&logoColor=white" alt="codechef" /></a>
@@ -317,7 +317,7 @@ Hemang Bhat:
 <div align="center">
 
 <a href="mailto:bhat.hemang@gmail.com"><img src="https://img.shields.io/badge/Gmail-7C3AED?style=for-the-badge&logo=gmail&logoColor=white" alt="gmail" /></a>
-<a href="https://linkedin.com/in/hemangbhat"><img src="https://img.shields.io/badge/LinkedIn-6D28D9?style=for-the-badge&logo=linkedin&logoColor=white" alt="linkedin" /></a>
+<a href="https://www.linkedin.com/in/hemangbhat"><img src="https://img.shields.io/badge/LinkedIn-6D28D9?style=for-the-badge&logo=linkedin&logoColor=white" alt="linkedin" /></a>
 <a href="https://github.com/hemangbhat"><img src="https://img.shields.io/badge/GitHub-4C1D95?style=for-the-badge&logo=github&logoColor=white" alt="github" /></a>
 <a href="https://hemangbhat.dev"><img src="https://img.shields.io/badge/Portfolio-8B5CF6?style=for-the-badge&logo=vercel&logoColor=white" alt="portfolio" /></a>
 
@@ -332,3 +332,4 @@ Hemang Bhat:
 <img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=0:8b5cf6,50:7c3aed,100:4c1d95&height=120&section=footer" alt="footer" />
 
 </div>
+

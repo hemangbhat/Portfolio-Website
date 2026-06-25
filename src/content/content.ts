@@ -122,6 +122,9 @@ export interface SiteContent {
   footer: string;
 }
 
+const GITHUB = 'https://github.com/hemangbhat';
+const LINKEDIN = 'https://www.linkedin.com/in/hemangbhat/';
+const LEETCODE = 'https://leetcode.com/u/blitzkrieg7';
 const EMAIL = 'bhat.hemang@gmail.com';
 
 export const content: SiteContent = {
@@ -135,8 +138,8 @@ export const content: SiteContent = {
     trust: ['CSAI @ NSUT', 'ex-Copper Digital', '250+ DSA solved'],
     ctas: [
       { label: 'Resume', href: '#', kind: 'resume', external: true },
-      { label: 'GitHub', href: '#', kind: 'github', external: true },
-      { label: 'LinkedIn', href: '#', kind: 'linkedin', external: true },
+      { label: 'GitHub', href: GITHUB, kind: 'github', external: true },
+      { label: 'LinkedIn', href: LINKEDIN, kind: 'linkedin', external: true },
       { label: 'Email', href: `mailto:${EMAIL}`, kind: 'email' },
     ],
   },
@@ -267,8 +270,8 @@ export const content: SiteContent = {
   ],
 
   github: {
-    username: 'hemang-bhat',
-    url: '#',
+    username: 'hemangbhat',
+    url: GITHUB,
     windowLabel: 'last 6 months',
     contributions: 420,
   },
@@ -300,8 +303,8 @@ export const content: SiteContent = {
         'Built across 12 phases: pgvector cosine retrieval with HNSW tuning, JWT auth + RBAC + document-level access control, PII redaction before any external delegation, async ingestion, query caching, and full Sentry distributed tracing. Backed by 306+ tests including 34+ Hypothesis property-based tests, and runs fully offline via an in-memory path.',
       tech: ['Next.js 16', 'React 19', 'TypeScript', 'Python 3.11', 'PostgreSQL', 'pgvector', 'Drizzle ORM', 'Sentry', 'Hypothesis', 'MCP'],
       links: [
-        { label: 'Live demo', href: '#', external: true, kind: 'live' },
-        { label: 'Source code', href: '#', external: true, kind: 'repo' },
+        { label: 'Live demo', href: 'https://omni-modal-enterprise-research-orch.vercel.app/', external: true, kind: 'live' },
+        { label: 'Source code', href: 'https://github.com/hemangbhat/Omni-Modal-Enterprise-Research-Orchestrator', external: true, kind: 'repo' },
       ],
       featured: true,
     },
@@ -316,8 +319,8 @@ export const content: SiteContent = {
         'Shipped a customizable offer-comparison matrix, CSV/PDF export, and Stripe-gated premium features — all behind secure auth and protected dashboards.',
       tech: ['Next.js', 'React', 'TypeScript', 'Tailwind CSS', 'MongoDB', 'Clerk', 'Stripe', 'Chart.js', 'jsPDF', 'Puppeteer'],
       links: [
-        { label: 'Live demo', href: '#', external: true, kind: 'live' },
-        { label: 'Source code', href: '#', external: true, kind: 'repo' },
+        { label: 'Live demo', href: 'https://trackiq.me/', external: true, kind: 'live' },
+        { label: 'Source code', href: 'https://github.com/hemangbhat/TrackIqPro', external: true, kind: 'repo' },
       ],
       featured: false,
     },
@@ -332,8 +335,8 @@ export const content: SiteContent = {
         'Reached up to 94.25% test accuracy and 0.920 macro F1, with SHAP-based explainability and CI/CD test coverage.',
       tech: ['Python', 'NLP', 'FinBERT', 'LSTM', 'SHAP', 'GridSearchCV', 'Pytest', 'GitHub Actions'],
       links: [
-        { label: 'Live demo', href: '#', external: true, kind: 'live' },
-        { label: 'Source code', href: '#', external: true, kind: 'repo' },
+        { label: 'Live demo', href: 'https://finsentanalyzer.streamlit.app/', external: true, kind: 'live' },
+        { label: 'Source code', href: 'https://github.com/hemangbhat/FinSentAnalyzer', external: true, kind: 'repo' },
       ],
       featured: false,
     },
@@ -347,8 +350,8 @@ export const content: SiteContent = {
         'Built a direct-to-cloud upload flow, Google Sheets sync, email automation, and secure database workflows that scaled with demand.',
       tech: ['AWS S3', 'Google Sheets API v4', 'Brevo API', 'Neon Postgres', 'Drizzle ORM'],
       links: [
-        { label: 'Live demo', href: '#', external: true, kind: 'live' },
-        { label: 'Source code', href: '#', external: true, kind: 'repo' },
+        { label: 'Live demo', href: 'https://dssywlc.in', external: true, kind: 'live' },
+        { label: 'Source code', href: 'https://github.com/hemangbhat/IEEE_DSSYWLC', external: true, kind: 'repo' },
       ],
       featured: false,
     },
@@ -455,9 +458,9 @@ export const content: SiteContent = {
     locations: ['New Delhi, India', 'Open to remote'],
     socials: [
       { label: 'Email', href: `mailto:${EMAIL}`, kind: 'email' },
-      { label: 'GitHub', href: '#', external: true, kind: 'github' },
-      { label: 'LinkedIn', href: '#', external: true, kind: 'linkedin' },
-      { label: 'LeetCode', href: '#', external: true, kind: 'leetcode' },
+      { label: 'GitHub', href: GITHUB, external: true, kind: 'github' },
+      { label: 'LinkedIn', href: LINKEDIN, external: true, kind: 'linkedin' },
+      { label: 'LeetCode', href: LEETCODE, external: true, kind: 'leetcode' },
     ],
   },
 
