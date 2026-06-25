@@ -1,4 +1,4 @@
-import { BadgeCheck } from 'lucide-react';
+import { BadgeCheck, ExternalLink } from 'lucide-react';
 import Reveal from '../components/motion/Reveal';
 import Section, { SectionHeading } from '../components/ui/Section';
 import Card from '../components/ui/Card';
@@ -102,6 +102,17 @@ export default function Education() {
                     <Chip key={s} label={s} />
                   ))}
                 </div>
+                {c.url && (
+                  <a
+                    href={c.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="mt-4 inline-flex items-center gap-1.5 text-xs font-medium text-accent transition-colors hover:underline"
+                  >
+                    Show credential
+                    <ExternalLink className="h-3 w-3" aria-hidden="true" />
+                  </a>
+                )}
               </Card>
             ))}
           </div>

@@ -63,7 +63,8 @@ describe('Education section', () => {
       expect(screen.getByText(e.title)).toBeInTheDocument();
     }
     // certifications are merged into Education
-    const certTitles = screen.getAllByText(content.certifications[0].title);
-    expect(certTitles.length).toBe(content.certifications.length);
+    for (const c of content.certifications) {
+      expect(screen.getByText(c.title)).toBeInTheDocument();
+    }
   });
 });

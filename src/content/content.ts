@@ -90,6 +90,7 @@ export interface Certification {
   issuer: string;
   date: string;
   skills: string[];
+  url?: string;
 }
 
 export interface HeroContent {
@@ -182,7 +183,7 @@ export const content: SiteContent = {
       tech: ['Python', 'LLMs', 'LangChain', 'REST APIs'],
     },
     {
-      role: 'Joint Secretary',
+      role: 'Vice Chair',
       organization: 'IEEE NSUT',
       location: 'New Delhi',
       duration: '2024 – Present',
@@ -358,9 +359,32 @@ export const content: SiteContent = {
   ],
 
   certifications: [
-    { title: 'Certification Title', issuer: 'Issuer', date: 'Add date', skills: ['Skill A', 'Skill B'] },
-    { title: 'Certification Title', issuer: 'Issuer', date: 'Add date', skills: ['Skill A', 'Skill B'] },
-    { title: 'Certification Title', issuer: 'Issuer', date: 'Add date', skills: ['Skill A', 'Skill B'] },
+    {
+      title: 'Building LLM Applications With Prompt Engineering',
+      issuer: 'NVIDIA',
+      date: 'Jan 2026',
+      skills: ['LLMs', 'Prompt Engineering', 'RAG'],
+      url: 'https://learn.nvidia.com/certificates?id=MmXdGZlQTWKL3LPGTt2rvQ',
+    },
+    {
+      title: 'Master the Coding Interview: Big Tech (FAANG) Interviews',
+      issuer: 'Udemy',
+      date: 'May 2025',
+      skills: ['DSA', 'Algorithms', 'System Design'],
+      url: 'https://ude.my/UC-bed3e8ad-d308-4837-9e1b-7757ed4c06f8',
+    },
+    {
+      title: 'Data Analytics Job Simulation',
+      issuer: 'Deloitte · Forage',
+      date: 'Dec 2025',
+      skills: ['Data Analysis', 'Forensic Technology'],
+    },
+    {
+      title: 'HACK4HEALTH — HealthTech Hackathon',
+      issuer: 'HORIBA × IIITD-IC',
+      date: 'Jul 2025',
+      skills: ['HealthTech', 'Hackathon'],
+    },
   ],
 
   credentials: {
@@ -369,7 +393,7 @@ export const content: SiteContent = {
         title: 'B.Tech, Computer Science & AI',
         org: 'Netaji Subhas University of Technology',
         duration: '2024 – 2028',
-        detail: 'CGPA 7.82',
+        detail: 'CGPA 7.85',
       },
       {
         title: 'Class XII (CBSE), PCM',
@@ -386,7 +410,7 @@ export const content: SiteContent = {
     ],
     positions: [
       {
-        title: 'Joint Secretary',
+        title: 'Vice Chair',
         org: 'IEEE NSUT',
         points: [
           'Organized hackathons, bootcamps & sessions for 300+ students.',
@@ -397,6 +421,7 @@ export const content: SiteContent = {
     awards: [
       '1st Place — TDS-CONTEST DSA',
       '2nd Place — DSA-ALGOVERSE 3.0, IEEE NSUT',
+      'Build with India — Top 5,000 of 25,000 teams (Google Office finale)',
       '250+ DSA problems solved on LeetCode, GfG & other platforms',
     ],
   },

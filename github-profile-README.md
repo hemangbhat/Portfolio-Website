@@ -181,7 +181,7 @@ Built and integrated AI agents for task automation and intelligent workflows use
 
 <br/>
 
-### Joint Secretary — IEEE NSUT
+### Vice Chair — IEEE NSUT
 `2024 – Present` · New Delhi
 
 Led technical community operations and large-scale event execution for the student branch.
@@ -214,21 +214,15 @@ Led technical community operations and large-scale event execution for the stude
 
 <div align="center">
 
-**Amazon Web Services**
+<a href="https://learn.nvidia.com/certificates?id=MmXdGZlQTWKL3LPGTt2rvQ"><img src="https://img.shields.io/badge/NVIDIA-Building%20LLM%20Apps%20with%20Prompt%20Engineering-76B900?style=for-the-badge&logo=nvidia&logoColor=white" alt="nvidia" /></a>
 
-<img src="https://img.shields.io/badge/AWS-Certification-7C3AED?style=for-the-badge&logo=amazonaws&logoColor=white" alt="aws" />
+<a href="https://ude.my/UC-bed3e8ad-d308-4837-9e1b-7757ed4c06f8"><img src="https://img.shields.io/badge/Udemy-Master%20the%20Coding%20Interview%20(FAANG)-7C3AED?style=for-the-badge&logo=udemy&logoColor=white" alt="udemy" /></a>
 
-**Oracle**
+<img src="https://img.shields.io/badge/Deloitte%20%C2%B7%20Forage-Data%20Analytics%20Job%20Simulation-6D28D9?style=for-the-badge&logo=deloitte&logoColor=white" alt="deloitte" />
 
-<img src="https://img.shields.io/badge/Oracle-Certification-6D28D9?style=for-the-badge&logo=oracle&logoColor=white" alt="oracle" />
+<img src="https://img.shields.io/badge/HORIBA%20%C3%97%20IIITD--IC-HACK4HEALTH%20Hackathon-8B5CF6?style=for-the-badge" alt="hack4health" />
 
-**NPTEL**
-
-<img src="https://img.shields.io/badge/NPTEL-Certification-8B5CF6?style=for-the-badge&logo=googlescholar&logoColor=white" alt="nptel" />
-
-**Cisco**
-
-<img src="https://img.shields.io/badge/Cisco-Certification-4C1D95?style=for-the-badge&logo=cisco&logoColor=white" alt="cisco" />
+<img src="https://img.shields.io/badge/Build%20with%20India-Top%205%2C000%20of%2025%2C000%20Teams-4C1D95?style=for-the-badge&logo=google&logoColor=white" alt="buildwithindia" />
 
 </div>
 
